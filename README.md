@@ -1,7 +1,5 @@
 # **01204114 Introduction to Computer Hardware Development**
 
----
-
 ## Hardware
 
 - 2 x Esp32 S3
@@ -24,8 +22,6 @@
 - stdlib.h
 - Wire.h
 
----
-
 ## Directories
 
 ```
@@ -42,8 +38,6 @@
     ├── overall-flow.png                # program flow
     └── Player-schemetic.png            # Player schemetic
 ```
-
----
 
 ## Developed by
 
