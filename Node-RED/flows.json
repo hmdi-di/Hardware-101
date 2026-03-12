@@ -1,0 +1,853 @@
+[
+    {
+        "id": "2105b94cc1e53f3f",
+        "type": "tab",
+        "label": "Flow 1",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "a5ebcf4d274ef9e8",
+        "type": "mqtt in",
+        "z": "2105b94cc1e53f3f",
+        "name": "",
+        "topic": "b6810504052/game/speed/win",
+        "qos": "0",
+        "datatype": "auto-detect",
+        "broker": "689034ecfc70149d",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 270,
+        "y": 180,
+        "wires": [
+            [
+                "4046380cdde44157"
+            ]
+        ]
+    },
+    {
+        "id": "28b4927470853e53",
+        "type": "change",
+        "z": "2105b94cc1e53f3f",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "topic",
+                "pt": "msg",
+                "to": "ชนะ",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1140,
+        "y": 180,
+        "wires": [
+            [
+                "ef1c7b0733038630"
+            ]
+        ]
+    },
+    {
+        "id": "87655d93def05004",
+        "type": "mqtt in",
+        "z": "2105b94cc1e53f3f",
+        "name": "",
+        "topic": "b6810504052/game/speed/lose",
+        "qos": "0",
+        "datatype": "auto-detect",
+        "broker": "689034ecfc70149d",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 270,
+        "y": 340,
+        "wires": [
+            [
+                "1c867b18641ba6a7"
+            ]
+        ]
+    },
+    {
+        "id": "e75b2b3cb89fe1ee",
+        "type": "change",
+        "z": "2105b94cc1e53f3f",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "topic",
+                "pt": "msg",
+                "to": "แพ้",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1140,
+        "y": 340,
+        "wires": [
+            [
+                "ef1c7b0733038630"
+            ]
+        ]
+    },
+    {
+        "id": "ef1c7b0733038630",
+        "type": "ui_chart",
+        "z": "2105b94cc1e53f3f",
+        "name": "",
+        "group": "58dbe1aa0709071f",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "label": "Speed Game",
+        "chartType": "pie",
+        "legend": "false",
+        "xformat": "HH:mm:ss",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": false,
+        "ymin": "",
+        "ymax": "",
+        "removeOlder": 1,
+        "removeOlderPoints": "",
+        "removeOlderUnit": "3600",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "className": "",
+        "x": 1390,
+        "y": 260,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "0b6ff269fe559c58",
+        "type": "mqtt in",
+        "z": "2105b94cc1e53f3f",
+        "name": "",
+        "topic": "b6810504052/game/memory/win",
+        "qos": "0",
+        "datatype": "auto-detect",
+        "broker": "689034ecfc70149d",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 270,
+        "y": 420,
+        "wires": [
+            [
+                "3dc15f746ca4cfe0"
+            ]
+        ]
+    },
+    {
+        "id": "c8d33feb88cf66b4",
+        "type": "change",
+        "z": "2105b94cc1e53f3f",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "topic",
+                "pt": "msg",
+                "to": "ชนะ",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1140,
+        "y": 420,
+        "wires": [
+            [
+                "4ed701d87c35cb71"
+            ]
+        ]
+    },
+    {
+        "id": "d57e6e920977d86c",
+        "type": "mqtt in",
+        "z": "2105b94cc1e53f3f",
+        "name": "",
+        "topic": "b6810504052/game/memory/lose",
+        "qos": "0",
+        "datatype": "auto-detect",
+        "broker": "689034ecfc70149d",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 260,
+        "y": 580,
+        "wires": [
+            [
+                "04145b0024f3d9de"
+            ]
+        ]
+    },
+    {
+        "id": "844ece73d3fda5bd",
+        "type": "change",
+        "z": "2105b94cc1e53f3f",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "topic",
+                "pt": "msg",
+                "to": "แพ้",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1140,
+        "y": 580,
+        "wires": [
+            [
+                "4ed701d87c35cb71"
+            ]
+        ]
+    },
+    {
+        "id": "4ed701d87c35cb71",
+        "type": "ui_chart",
+        "z": "2105b94cc1e53f3f",
+        "name": "",
+        "group": "58dbe1aa0709071f",
+        "order": 3,
+        "width": 0,
+        "height": 0,
+        "label": "Memory Game",
+        "chartType": "pie",
+        "legend": "false",
+        "xformat": "HH:mm:ss",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": false,
+        "ymin": "",
+        "ymax": "",
+        "removeOlder": 1,
+        "removeOlderPoints": "",
+        "removeOlderUnit": "3600",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d92626",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "className": "",
+        "x": 1400,
+        "y": 500,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "b272f193137ce34e",
+        "type": "mqtt in",
+        "z": "2105b94cc1e53f3f",
+        "name": "",
+        "topic": "b6810504052/game/speed/rounds",
+        "qos": "0",
+        "datatype": "auto-detect",
+        "broker": "689034ecfc70149d",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 260,
+        "y": 640,
+        "wires": [
+            [
+                "7f0367875b271224"
+            ]
+        ]
+    },
+    {
+        "id": "131f7bd1ac6ba508",
+        "type": "mqtt in",
+        "z": "2105b94cc1e53f3f",
+        "name": "",
+        "topic": "b6810504052/game/memory/rounds",
+        "qos": "0",
+        "datatype": "auto-detect",
+        "broker": "689034ecfc70149d",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 260,
+        "y": 800,
+        "wires": [
+            [
+                "402146f6f810ed92"
+            ]
+        ]
+    },
+    {
+        "id": "a218829cf43a15d9",
+        "type": "ui_chart",
+        "z": "2105b94cc1e53f3f",
+        "name": "",
+        "group": "c561cc9d57a7bd94",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "label": "Graph",
+        "chartType": "bar",
+        "legend": "false",
+        "xformat": "HH:mm:ss",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": false,
+        "ymin": "",
+        "ymax": "",
+        "removeOlder": 1,
+        "removeOlderPoints": "",
+        "removeOlderUnit": "3600",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "className": "",
+        "x": 1370,
+        "y": 720,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "143f37428152597e",
+        "type": "change",
+        "z": "2105b94cc1e53f3f",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "topic",
+                "pt": "msg",
+                "to": "Memory Game",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1140,
+        "y": 800,
+        "wires": [
+            [
+                "a218829cf43a15d9"
+            ]
+        ]
+    },
+    {
+        "id": "357f8caa681b0663",
+        "type": "change",
+        "z": "2105b94cc1e53f3f",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "topic",
+                "pt": "msg",
+                "to": "Speed Game",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1140,
+        "y": 640,
+        "wires": [
+            [
+                "a218829cf43a15d9"
+            ]
+        ]
+    },
+    {
+        "id": "124bc60c062c0857",
+        "type": "mqtt in",
+        "z": "2105b94cc1e53f3f",
+        "name": "",
+        "topic": "b6810504052/game/history/most_played_game",
+        "qos": "0",
+        "datatype": "auto-detect",
+        "broker": "689034ecfc70149d",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 220,
+        "y": 920,
+        "wires": [
+            [
+                "9ab3915817002231"
+            ]
+        ]
+    },
+    {
+        "id": "9ab3915817002231",
+        "type": "function",
+        "z": "2105b94cc1e53f3f",
+        "name": "function 1",
+        "func": "let now = new Date();\n// ปรับเวลาให้เป็นโซนไทย\nmsg.payload = now.toLocaleString(\"th-TH\", {timeZone: \"Asia/Bangkok\"});\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 640,
+        "y": 920,
+        "wires": [
+            [
+                "7764c1912a900596"
+            ]
+        ]
+    },
+    {
+        "id": "7764c1912a900596",
+        "type": "ui_text",
+        "z": "2105b94cc1e53f3f",
+        "group": "9e5fb8f51c1de8d3",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "เล่นครั้งล่าสุดเวลา:",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#000000",
+        "x": 1410,
+        "y": 920,
+        "wires": []
+    },
+    {
+        "id": "0c2f5d64364d65ba",
+        "type": "inject",
+        "z": "2105b94cc1e53f3f",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 420,
+        "y": 860,
+        "wires": [
+            [
+                "9ab3915817002231"
+            ]
+        ]
+    },
+    {
+        "id": "4046380cdde44157",
+        "type": "function",
+        "z": "2105b94cc1e53f3f",
+        "name": "function speed win",
+        "func": "let session_val = Number(msg.payload) || 0;\nlet total_val = flow.get('total_speed_win') || 0;\ntotal_val += session_val;\nflow.set('total_speed_win', total_val);\nmsg.payload = total_val;\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 610,
+        "y": 180,
+        "wires": [
+            [
+                "28b4927470853e53",
+                "20ef04d1cb59c98d"
+            ]
+        ]
+    },
+    {
+        "id": "1c867b18641ba6a7",
+        "type": "function",
+        "z": "2105b94cc1e53f3f",
+        "name": "function speed lose",
+        "func": "let session_val = Number(msg.payload) || 0;\nlet total_val = flow.get('total_speed_lose') || 0; // ชื่อตัวแปร\ntotal_val += session_val;\nflow.set('total_speed_lose', total_val);         // ชื่อตัวแปร\nmsg.payload = total_val;\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 610,
+        "y": 340,
+        "wires": [
+            [
+                "e75b2b3cb89fe1ee",
+                "20ef04d1cb59c98d"
+            ]
+        ]
+    },
+    {
+        "id": "3dc15f746ca4cfe0",
+        "type": "function",
+        "z": "2105b94cc1e53f3f",
+        "name": "function memory win",
+        "func": "let session_val = Number(msg.payload) || 0;\nlet total_val = flow.get('total_memory_win') || 0; // ชื่อตัวแปร\ntotal_val += session_val;\nflow.set('total_memory_win', total_val);         // ชื่อตัวแปร\nmsg.payload = total_val;\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 620,
+        "y": 420,
+        "wires": [
+            [
+                "c8d33feb88cf66b4",
+                "5f5232a4197b40b5"
+            ]
+        ]
+    },
+    {
+        "id": "04145b0024f3d9de",
+        "type": "function",
+        "z": "2105b94cc1e53f3f",
+        "name": "function memory lose",
+        "func": "let session_val = Number(msg.payload) || 0;\nlet total_val = flow.get('total_memory_lose') || 0; // ชื่อตัวแปร\ntotal_val += session_val;\nflow.set('total_memory_lose', total_val);         // ชื่อตัวแปร\nmsg.payload = total_val;\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 620,
+        "y": 580,
+        "wires": [
+            [
+                "844ece73d3fda5bd",
+                "5f5232a4197b40b5"
+            ]
+        ]
+    },
+    {
+        "id": "7f0367875b271224",
+        "type": "function",
+        "z": "2105b94cc1e53f3f",
+        "name": "function speed rounds",
+        "func": "// รับจำนวนรอบที่เล่นจากตานี้\nlet session_val = Number(msg.payload) || 0;\n\n// ดึงจำนวนรอบสะสมเดิม (ถ้าไม่มีให้เริ่มที่ 0)\nlet total_val = flow.get('total_speed_rounds') || 0; \n\n// เอามาบวกทบกัน\ntotal_val += session_val;\n\n// บันทึกค่าสะสมกลับลงไป\nflow.set('total_speed_rounds', total_val);         \n\n// ส่งยอดรวมไปแสดงที่กราฟ\nmsg.payload = total_val;\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 620,
+        "y": 640,
+        "wires": [
+            [
+                "357f8caa681b0663"
+            ]
+        ]
+    },
+    {
+        "id": "402146f6f810ed92",
+        "type": "function",
+        "z": "2105b94cc1e53f3f",
+        "name": "function memory rounds",
+        "func": "let session_val = Number(msg.payload) || 0;\nlet total_val = flow.get('total_memory_rounds') || 0;\ntotal_val += session_val;\nflow.set('total_memory_rounds', total_val);\n\nmsg.payload = total_val;\nmsg.topic = \"Memory Game\"; // ✅ ต้องเพิ่มบรรทัดนี้ เพื่อบอกกราฟว่านี่คือแท่งของ Memory นะ\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 630,
+        "y": 800,
+        "wires": [
+            [
+                "143f37428152597e"
+            ]
+        ]
+    },
+    {
+        "id": "20ef04d1cb59c98d",
+        "type": "function",
+        "z": "2105b94cc1e53f3f",
+        "name": "function speed winrate",
+        "func": "// ดึงค่าสะสมล่าสุดที่ Node-RED จำไว้\nlet win = flow.get('total_speed_win') || 0;\nlet lose = flow.get('total_speed_lose') || 0;\n\n// หาจำนวนรอบทั้งหมด (เอาชนะกับแพ้มาบวกกันชัวร์กว่า)\nlet total = win + lose;\nlet percent = 0;\n\n// ป้องกัน error ตัวหารเป็น 0\nif (total > 0) {\n    percent = (win / total) * 100;\n}\n\n// ส่งค่าเปอร์เซ็นต์ออกไป (ทศนิยม 2 ตำแหน่ง)\nmsg.payload = Number(percent.toFixed(2));\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 900,
+        "y": 260,
+        "wires": [
+            [
+                "6b1e03ed29b6088d"
+            ]
+        ]
+    },
+    {
+        "id": "5f5232a4197b40b5",
+        "type": "function",
+        "z": "2105b94cc1e53f3f",
+        "name": "function memory winrate",
+        "func": "// ดึงค่าสะสมล่าสุดที่ Node-RED จำไว้\nlet win = flow.get('total_memory_win') || 0;\nlet lose = flow.get('total_memory_lose') || 0;\n\nlet total = win + lose;\nlet percent = 0;\n\nif (total > 0) {\n    percent = (win / total) * 100;\n}\n\nmsg.payload = Number(percent.toFixed(2));\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 910,
+        "y": 500,
+        "wires": [
+            [
+                "3a9b0f901b4917b4"
+            ]
+        ]
+    },
+    {
+        "id": "6b1e03ed29b6088d",
+        "type": "ui_text",
+        "z": "2105b94cc1e53f3f",
+        "group": "58dbe1aa0709071f",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "Speed Winrate",
+        "format": "{{msg.payload}}%",
+        "layout": "col-center",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#000000",
+        "x": 1140,
+        "y": 260,
+        "wires": []
+    },
+    {
+        "id": "3a9b0f901b4917b4",
+        "type": "ui_text",
+        "z": "2105b94cc1e53f3f",
+        "group": "58dbe1aa0709071f",
+        "order": 4,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "Memory Winrate",
+        "format": "{{msg.payload}}%",
+        "layout": "col-center",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#000000",
+        "x": 1140,
+        "y": 500,
+        "wires": []
+    },
+    {
+        "id": "563d66348f78ca7d",
+        "type": "function",
+        "z": "2105b94cc1e53f3f",
+        "name": "RESET",
+        "func": "flow.set('total_speed_win', 0);\nflow.set('total_speed_lose', 0);\nflow.set('total_speed_rounds', 0);\nflow.set('total_memory_win', 0);\nflow.set('total_memory_lose', 0);\nflow.set('total_memory_rounds', 0);\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 360,
+        "y": 100,
+        "wires": [
+            [
+                "4046380cdde44157",
+                "1c867b18641ba6a7",
+                "3dc15f746ca4cfe0",
+                "04145b0024f3d9de",
+                "7f0367875b271224",
+                "402146f6f810ed92"
+            ]
+        ]
+    },
+    {
+        "id": "40a925f52c113480",
+        "type": "inject",
+        "z": "2105b94cc1e53f3f",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "0",
+        "payloadType": "num",
+        "x": 190,
+        "y": 100,
+        "wires": [
+            [
+                "563d66348f78ca7d"
+            ]
+        ]
+    },
+    {
+        "id": "689034ecfc70149d",
+        "type": "mqtt-broker",
+        "name": "Ku IOT",
+        "broker": "iot.cpe.ku.ac.th",
+        "port": 1883,
+        "clientid": "",
+        "autoConnect": true,
+        "usetls": false,
+        "protocolVersion": 4,
+        "keepalive": 60,
+        "cleansession": true,
+        "autoUnsubscribe": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthRetain": "false",
+        "birthPayload": "",
+        "birthMsg": {},
+        "closeTopic": "",
+        "closeQos": "0",
+        "closeRetain": "false",
+        "closePayload": "",
+        "closeMsg": {},
+        "willTopic": "",
+        "willQos": "0",
+        "willRetain": "false",
+        "willPayload": "",
+        "willMsg": {},
+        "userProps": "",
+        "sessionExpiry": ""
+    },
+    {
+        "id": "58dbe1aa0709071f",
+        "type": "ui_group",
+        "name": "สถิติการชนะ",
+        "tab": "3141f176921dcfe8",
+        "order": 1,
+        "disp": true,
+        "width": 6,
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "c561cc9d57a7bd94",
+        "type": "ui_group",
+        "name": "เปรียบเทียบจำนวนรอบที่เล่น",
+        "tab": "3141f176921dcfe8",
+        "order": 2,
+        "disp": true,
+        "width": 6,
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "9e5fb8f51c1de8d3",
+        "type": "ui_group",
+        "name": "ประวัติ",
+        "tab": "3141f176921dcfe8",
+        "order": 3,
+        "disp": true,
+        "width": 6,
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "3141f176921dcfe8",
+        "type": "ui_tab",
+        "name": "Home",
+        "icon": "dashboard",
+        "disabled": false,
+        "hidden": false
+    }
+]
