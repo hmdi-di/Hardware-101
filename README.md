@@ -26,17 +26,17 @@
 
 ```text
 Hardware-101
-├── Breadboard Diagram and Workflow.    # Diagram and workflow of program
-│   ├── Main-Breadboard Diagram.png
-│   ├── overall-workflow.png
-│   └── Player-Breadboard Diagram.png
+├── Breadboard Diagram and Workflow     # System wiring diagrams and workflow
+│   ├── Main-Breadboard Diagram.png
+│   ├── overall-workflow.png
+│   └── Player-Breadboard Diagram.png
 ├── Firmware
-│   ├── Main.ino                        # Program for Main-board
-│   └── Player.ino                      # Program for Player-board
-├── license.txt                         # MIT License file
+│   ├── Main.ino                        # Firmware for Main Board
+│   └── Player.ino                      # Firmware for Player Board
+├── license.txt                         # MIT License
 ├── Node-RED
-│   └── flows.json                      # Node-RED Flows 
-└── README.md
+│   └── flows.json                      # Node-RED dashboard configuration
+└── README.md                           # Project documentation
 ```
 
 ## Developed by
